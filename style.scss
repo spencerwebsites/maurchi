@@ -1,0 +1,43 @@
+/*
+Theme Name:			Maurchi
+Text Domain:		maurchi
+Version:			1.0.0
+Requires at least:	4.7
+Requires PHP:		5.2.4
+Description:		Theme for Maurchi
+Author:				Spencer Creative Co.
+Author URI:			https://spencercreative.co/
+Theme URI:			https://github.com/spencerwebsites/maurchi/
+License:			GNU General Public License v2 or later
+License URI:		http://www.gnu.org/licenses/gpl-2.0.html
+GitHub Theme URI:	https://github.com/spencerwebsites/maurchi/
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+@import 'assets/sass/normalize';
+
+@import 'assets/sass/variables';
+
+@import 'assets/sass/mixins';
+
+@import 'assets/sass/utility-classes';
+
+@import 'assets/sass/base';
+
+@import 'assets/sass/header';
+
+@import 'assets/sass/pages';
+
+@import 'assets/sass/footer';
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // IE 10+
+    @import 'assets/sass/ie';
+}
+
+@import 'assets/sass/print';

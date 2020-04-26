@@ -1,0 +1,85 @@
+// CSS Grid
+.grid-parent {
+    @include display-grid;
+}
+
+.wrapper {
+    padding-left: $padding__wrapper;
+    padding-right: $padding__wrapper;
+}
+
+.screen-reader-text {
+    @include screen-reader-text;
+}
+
+.has-maurchi-purple-background-color {
+    background-color: $color__purple;
+}
+
+.has-maurchi-red-background-color {
+    background-color: $color__red;
+}
+
+.has-maurchi-orange-background-color {
+    background-color: $color__orange;
+}
+
+.has-maurchi-yellow-background-color {
+    background-color: $color__yellow;
+}
+
+.has-maurchi-green-background-color {
+    background-color: $color__green;
+}
+
+.has-maurchi-blue-background-color {
+    background-color: $color__blue;
+}
+
+.has-maurchi-lavender-background-color {
+    background-color: $color__lavender;
+}
+
+.has-white-background-color {
+    background-color: white;
+}
+
+.has-black-background-color {
+    background-color: black;
+}
+
+.has-maurchi-purple-color {
+    color: $color__purple;
+}
+
+.has-maurchi-red-color {
+    color: $color__red;
+}
+
+.has-maurchi-orange-color {
+    color: $color__orange;
+}
+
+.has-maurchi-yellow-color {
+    color: $color__yellow;
+}
+
+.has-maurchi-green-color {
+    color: $color__green;
+}
+
+.has-maurchi-blue-color {
+    color: $color__blue;
+}
+
+.has-maurchi-lavender-color {
+    color: $color__lavender;
+}
+
+.has-white-color {
+    color: white;
+}
+
+.has-black-color {
+    color: black;
+}

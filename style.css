@@ -1,0 +1,1922 @@
+@charset "UTF-8";
+/*
+Theme Name:			Maurchi
+Text Domain:		maurchi
+Version:			1.0.0
+Requires at least:	4.7
+Requires PHP:		5.2.4
+Description:		Theme for Maurchi
+Author:				Spencer Creative Co.
+Author URI:			https://spencercreative.co/
+Theme URI:			https://github.com/spencerwebsites/maurchi/
+License:			GNU General Public License v2 or later
+License URI:		http://www.gnu.org/licenses/gpl-2.0.html
+GitHub Theme URI:	https://github.com/spencerwebsites/maurchi/
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.grid-parent {
+  display: -ms-grid;
+  display: grid;
+}
+
+.wrapper {
+  padding-left: 5.62vw;
+  padding-right: 5.62vw;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.has-maurchi-purple-background-color {
+  background-color: #5C2D91;
+}
+
+.has-maurchi-red-background-color {
+  background-color: #ED1C24;
+}
+
+.has-maurchi-orange-background-color {
+  background-color: #F7941D;
+}
+
+.has-maurchi-yellow-background-color {
+  background-color: #FFDE17;
+}
+
+.has-maurchi-green-background-color {
+  background-color: #00A651;
+}
+
+.has-maurchi-blue-background-color {
+  background-color: #1B75BC;
+}
+
+.has-maurchi-lavender-background-color {
+  background-color: #B35FA5;
+}
+
+.has-white-background-color {
+  background-color: white;
+}
+
+.has-black-background-color {
+  background-color: black;
+}
+
+.has-maurchi-purple-color {
+  color: #5C2D91;
+}
+
+.has-maurchi-red-color {
+  color: #ED1C24;
+}
+
+.has-maurchi-orange-color {
+  color: #F7941D;
+}
+
+.has-maurchi-yellow-color {
+  color: #FFDE17;
+}
+
+.has-maurchi-green-color {
+  color: #00A651;
+}
+
+.has-maurchi-blue-color {
+  color: #1B75BC;
+}
+
+.has-maurchi-lavender-color {
+  color: #B35FA5;
+}
+
+.has-white-color {
+  color: white;
+}
+
+.has-black-color {
+  color: black;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: #5C2D91;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #5C2D91;
+  color: #ffffff;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #ffffff;
+  color: black;
+  font-family: "Raleway", BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 0;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+  background-color: #5C2D91;
+  border-radius: 50px;
+  color: black;
+  font-family: "Raleway", BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #5C2D91;
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+.h1 {
+  font-size: 3.56rem;
+  margin-bottom: 1rem;
+  margin-top: 2.37rem;
+}
+
+h2,
+.h2 {
+  font-size: 3.16rem;
+  margin-bottom: 1rem;
+  margin-top: 3.16rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.67rem;
+  margin-bottom: 1rem;
+  margin-top: 2.67rem;
+}
+
+h4,
+.h4 {
+  font-size: 2.37rem;
+  margin-bottom: 1rem;
+  margin-top: 2.37rem;
+}
+
+h5,
+.h5 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h6,
+.h6 {
+  font-size: 1.77rem;
+  margin-bottom: 1rem;
+  margin-top: 1.77rem;
+}
+
+p {
+  font-size: 1.13rem;
+  margin-top: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #5C2D91;
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+a:hover, a:focus {
+  color: #5C2D91;
+  text-decoration: none;
+}
+
+a:not([href]) {
+  color: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+dfn,
+cite,
+em,
+figcaption,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+}
+
+blockquote > *:not(cite) {
+  text-align: left;
+}
+
+blockquote::before {
+  content: '“';
+  font-family: "Kaushan Script", cursive;
+  font-size: 7.12rem;
+  left: -60px;
+  line-height: 1;
+  opacity: .3;
+  position: absolute;
+  top: -15px;
+}
+
+blockquote cite {
+  border-top: 2px solid;
+  display: inline-block;
+  font-family: "Raleway", BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.13rem;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding-top: 0.63rem;
+}
+
+pre {
+  font-family: Courier, monospace;
+  font-size: 1.13rem;
+  line-height: 1.8;
+  overflow: auto;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: Menlo, monaco, Consolas, Lucida Console, monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+#site-header {
+  -webkit-column-gap: 3.16rem;
+          column-gap: 3.16rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'logo menu-toggle' 'left-menu left-menu' 'right-menu right-menu';
+  -ms-grid-columns: max-content 1fr;
+      grid-template-columns: -webkit-max-content 1fr;
+      grid-template-columns: max-content 1fr;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+@media only screen and (min-width: 42.09em) {
+  #site-header {
+        grid-template-areas: 'none logo menu-toggle' 'left-menu left-menu left-menu' 'right-menu right-menu right-menu';
+    -ms-grid-columns: 1fr max-content 1fr;
+        grid-template-columns: 1fr -webkit-max-content 1fr;
+        grid-template-columns: 1fr max-content 1fr;
+  }
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header {
+        grid-template-areas: 'left-menu logo right-menu';
+  }
+}
+
+#site-header .home-link {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #5C2D91;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  margin: 0.42rem 0;
+}
+
+#site-header .bloginfo {
+  color: #5C2D91;
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.13rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 0;
+}
+
+#site-header .bloginfo img {
+  max-width: 150px;
+}
+
+#site-header nav {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #5C2D91;
+  display: none;
+  font-weight: 600;
+  margin: 0 -5.62vw;
+  padding: 0 5.62vw;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header nav {
+    background-color: transparent;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header nav > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+#site-header nav li {
+  text-align: center;
+  border-bottom: 2px solid transparent;
+}
+
+#site-header nav li.current-menu-item, #site-header nav li:hover, #site-header nav li:focus {
+  border-bottom-color: white;
+}
+
+#site-header nav a {
+  color: white;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#site-header .main-menu {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: left-menu;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header .main-menu {
+    padding-top: 0;
+  }
+}
+
+#site-header .main-menu > ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header .main-menu > ul > li {
+    margin-left: 3.16rem;
+  }
+}
+
+#site-header .secondary-menu {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: right-menu;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header .secondary-menu {
+    padding-bottom: 0;
+  }
+}
+
+#site-header .secondary-menu > ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header .secondary-menu > ul > li {
+    margin-right: 3.16rem;
+  }
+}
+
+#site-header .sub-menu {
+  display: none;
+}
+
+#site-header .menu-toggle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu-toggle;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  line-height: 1.3;
+  padding: 0.56rem 0.75rem;
+}
+
+@media only screen and (min-width: 56.12em) {
+  #site-header .menu-toggle {
+    display: none;
+  }
+}
+
+#site-header .menu-toggle:before {
+  content: "\f0c9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+nav a[href*="500px.com"]:before, nav a[href*="amazon.com"]:before, nav a[href*="angel.co"]:before, nav a[href*="audible.com"]:before, nav a[href*="behance.net"]:before, nav a[href*="codepen.io"]:before, nav a[href*="creativecommons.org"]:before, nav a[href*="deviantart.com"]:before, nav a[href*="digg.com"]:before, nav a[href*="discordapp.com"]:before, nav a[href*="dribbble.com"]:before, nav a[href*="ebay.com"]:before, nav a[href*="facebook.com"]:before, nav a[href*="flickr.com"]:before, nav a[href*="github.com"]:before, nav a[href*="gitlab.com"]:before, nav a[href*="goodreads.com"]:before, nav a[href*="houzz.com"]:before, nav a[href*="imdb.com"]:before, nav a[href*="instagram.com"]:before, nav a[href*="kickstarter.com"]:before, nav a[href*="jsfiddle.net"]:before, nav a[href*="linkedin.com"]:before, nav a[href*="last.fm"]:before, nav a[href*="medium.com"]:before, nav a[href*="meetup.com"]:before, nav a[href*="mixcloud.com"]:before, nav a[href*="patreon.com"]:before, nav a[href*="periscope.com"]:before, nav a[href*="pinterest.com"]:before, nav a[href*="play.google.com"]:before, nav a[href*="plus.google.com"]:before, nav a[href*="producthunt.com"]:before, nav a[href*="quora.com"]:before, nav a[href*="reddit.com"]:before, nav a[href*="slack.com"]:before, nav a[href*="soundcloud.com"]:before, nav a[href*="spotify.com"]:before, nav a[href*="tumblr.com"]:before, nav a[href*="twitch.tv"]:before, nav a[href*="twitter.com"]:before, nav a[href*="vimeo.com"]:before, nav a[href*="wordpress.com"]:before, nav a[href*="wordpress.org"]:before, nav a[href*="youtube.com"]:before {
+  font-family: "Font Awesome 5 Brands";
+  text-align: center;
+  width: 1.25em;
+}
+
+nav a[href*="500px.com"]:before {
+  content: "\f26e";
+}
+
+nav a[href*="500px.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="amazon.com"]:before {
+  content: "\f270";
+}
+
+nav a[href*="amazon.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="angel.co"]:before {
+  content: "\f209";
+}
+
+nav a[href*="angel.co"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="audible.com"]:before {
+  content: "\f373";
+}
+
+nav a[href*="audible.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="behance.net"]:before {
+  content: "\f39e";
+}
+
+nav a[href*="behance.net"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="codepen.io"]:before {
+  content: "\f1cb";
+}
+
+nav a[href*="codepen.io"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="creativecommons.org"]:before {
+  content: "\f25e";
+}
+
+nav a[href*="creativecommons.org"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="deviantart.com"]:before {
+  content: "\f1bd";
+}
+
+nav a[href*="deviantart.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="digg.com"]:before {
+  content: "\f1a6";
+}
+
+nav a[href*="digg.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="discordapp.com"]:before {
+  content: "\f392";
+}
+
+nav a[href*="discordapp.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="dribbble.com"]:before {
+  content: "\f17d";
+}
+
+nav a[href*="dribbble.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="ebay.com"]:before {
+  content: "\f4f4";
+}
+
+nav a[href*="ebay.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="facebook.com"]:before {
+  content: "\f39e";
+}
+
+nav a[href*="facebook.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="flickr.com"]:before {
+  content: "\f16e";
+}
+
+nav a[href*="flickr.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="github.com"]:before {
+  content: "\f09b";
+}
+
+nav a[href*="github.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="gitlab.com"]:before {
+  content: "\f296";
+}
+
+nav a[href*="gitlab.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="goodreads.com"]:before {
+  content: "\f3a9";
+}
+
+nav a[href*="goodreads.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="houzz.com"]:before {
+  content: "\f27c";
+}
+
+nav a[href*="houzz.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="imdb.com"]:before {
+  content: "\f2d8";
+}
+
+nav a[href*="imdb.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="instagram.com"]:before {
+  content: "\f16d";
+}
+
+nav a[href*="instagram.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="kickstarter.com"]:before {
+  content: "\f3bc";
+}
+
+nav a[href*="kickstarter.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="jsfiddle.net"]:before {
+  content: "\f1cc";
+}
+
+nav a[href*="jsfiddle.net"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="linkedin.com"]:before {
+  content: "\f0e1";
+}
+
+nav a[href*="linkedin.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="last.fm"]:before {
+  content: "\f202";
+}
+
+nav a[href*="last.fm"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="medium.com"]:before {
+  content: "\f3c7";
+}
+
+nav a[href*="medium.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="meetup.com"]:before {
+  content: "\f2e0";
+}
+
+nav a[href*="meetup.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="mixcloud.com"]:before {
+  content: "\f289";
+}
+
+nav a[href*="mixcloud.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="patreon.com"]:before {
+  content: "\f3d9";
+}
+
+nav a[href*="patreon.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="periscope.com"]:before {
+  content: "\f3da";
+}
+
+nav a[href*="periscope.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="pinterest.com"]:before {
+  content: "\f231";
+}
+
+nav a[href*="pinterest.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="play.google.com"]:before {
+  content: "\f3ab";
+}
+
+nav a[href*="play.google.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="plus.google.com"]:before {
+  content: "\f0d5";
+}
+
+nav a[href*="plus.google.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="producthunt.com"]:before {
+  content: "\f288";
+}
+
+nav a[href*="producthunt.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="quora.com"]:before {
+  content: "\f2c4";
+}
+
+nav a[href*="quora.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="reddit.com"]:before {
+  content: "\f281";
+}
+
+nav a[href*="reddit.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="slack.com"]:before {
+  content: "\f198";
+}
+
+nav a[href*="slack.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="soundcloud.com"]:before {
+  content: "\f1be";
+}
+
+nav a[href*="soundcloud.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="spotify.com"]:before {
+  content: "\f1bc";
+}
+
+nav a[href*="spotify.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="tumblr.com"]:before {
+  content: "\f173";
+}
+
+nav a[href*="tumblr.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="twitch.tv"]:before {
+  content: "\f1e8";
+}
+
+nav a[href*="twitch.tv"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="twitter.com"]:before {
+  content: "\f099";
+}
+
+nav a[href*="twitter.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="vimeo.com"]:before {
+  content: "\f27d";
+}
+
+nav a[href*="vimeo.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="wordpress.com"]:before, nav a[href*="wordpress.org"]:before {
+  content: "\f19a";
+}
+
+nav a[href*="wordpress.com"] .link-text, nav a[href*="wordpress.org"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a[href*="youtube.com"]:before {
+  content: "\f167";
+}
+
+nav a[href*="youtube.com"] .link-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.entry-header {
+  position: relative;
+}
+
+.entry-header.has-post-thumbnail {
+  background-color: #5C2D91;
+  display: table;
+  margin: 0 -5.62vw;
+  min-height: 80vh;
+  width: calc(100% + 2 * 5.62vw);
+}
+
+.entry-header.has-post-thumbnail .entry-title {
+  color: white;
+  display: table-cell;
+  height: 100%;
+  padding: 4rem 5.62vw;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 1;
+}
+
+.entry-header.has-post-thumbnail .entry-title h1 {
+  color: white;
+}
+
+.entry-header .featured-image-blend {
+  background-color: #5C2D91;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.entry-header .featured-image-blend .featured-image-blend-color {
+  background: #5C2D91;
+  height: 100%;
+  left: 0;
+  mix-blend-mode: color;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.entry-header .featured-image-blend .featured-image {
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+#menu-home-cta-button {
+  list-style: none;
+  margin: 1.77rem 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+#menu-home-cta-button a {
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  display: inline-block;
+  font-size: 1.13rem;
+  margin: 0.63rem;
+  padding: 0.47rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+#menu-home-cta-button a:hover, #menu-home-cta-button a:focus {
+  background-color: white;
+  color: #5C2D91;
+}
+
+.entry-content {
+  padding: 4rem 0;
+}
+
+.entry-content > *:not(.wp-block-group) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+.entry-content > *:not(.wp-block-group):first-child {
+  margin-top: 0;
+}
+
+.entry-content > *:not(.wp-block-group):last-child {
+  margin-bottom: 0;
+}
+
+.entry-content > .wp-block-group.has-background:not(.has-white-background-color) {
+  margin-left: -5.62vw;
+  margin-right: -5.62vw;
+  margin-top: 4rem;
+  padding: 4rem 5.62vw;
+}
+
+.entry-content > .wp-block-group.has-background:not(.has-white-background-color) + .wp-block-group.has-background {
+  margin-top: 0;
+}
+
+.entry-content > .wp-block-group.has-background:not(.has-white-background-color) + *:not(.wp-block-group) {
+  margin-top: 4rem;
+}
+
+.entry-content > .wp-block-group:last-child {
+  margin-bottom: -4rem;
+}
+
+.entry-content > .wp-block-group .wp-block-group__inner-container > *:first-child {
+  margin-top: 0;
+}
+
+.entry-content > .wp-block-group .wp-block-group__inner-container > *:last-child {
+  margin-bottom: 0;
+}
+
+.entry-content > .wp-block-columns {
+  margin-left: -5.62vw;
+  margin-right: -5.62vw;
+  max-width: none;
+  padding-left: 5.62vw;
+  padding-right: 5.62vw;
+}
+
+.entry-content > .wp-block-columns .wp-block-column > *:first-child {
+  margin-top: 0;
+}
+
+.entry-content > .wp-block-columns .wp-block-column > *:last-child {
+  margin-bottom: 0;
+}
+
+#site-footer {
+  background-color: #5C2D91;
+}
+
+#site-footer .main-footer {
+  -webkit-column-gap: 3.16rem;
+          column-gap: 3.16rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'footer-logo' 'footer-nav';
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  padding: 1rem 0;
+}
+
+@media only screen and (min-width: 42.09em) {
+  #site-footer .main-footer {
+        grid-template-areas: 'footer-logo footer-nav';
+    -ms-grid-columns: max-content auto;
+        grid-template-columns: -webkit-max-content auto;
+        grid-template-columns: max-content auto;
+  }
+}
+
+#site-footer .home-link {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: footer-logo;
+  margin: 0.79rem 0;
+  text-align: center;
+}
+
+#site-footer .home-link img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+#site-footer .footer-nav {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: footer-nav;
+}
+
+#site-footer .footer-nav ul {
+  display: block;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 42.09em) {
+  #site-footer .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#site-footer .footer-nav li {
+  margin: 0 1.58rem;
+  text-align: center;
+}
+
+#site-footer .footer-nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#site-footer .footer-nav a:hover, #site-footer .footer-nav a:focus {
+  text-decoration: underline;
+}
+
+#site-footer .footer-nav .cta a {
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 0.63rem 1rem;
+}
+
+#site-footer .footer-nav .cta a:hover, #site-footer .footer-nav .cta a:focus {
+  background-color: white;
+  color: #5C2D91;
+  text-decoration: none;
+}
+
+#site-footer .copyright {
+  color: white;
+}
+
+#site-footer .copyright p {
+  font-size: 0.84rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.42rem 0;
+  text-align: center;
+}
+
+#site-footer .copyright a {
+  color: white;
+}

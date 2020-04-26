@@ -1,0 +1,743 @@
+#site-header {
+    column-gap: $size_15;
+    display: grid;
+    grid-template-areas:
+        'logo menu-toggle'
+        'left-menu left-menu'
+        'right-menu right-menu';
+    grid-template-columns: max-content 1fr;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+
+    @include media(mobile) {
+        grid-template-areas:
+            'none logo menu-toggle'
+            'left-menu left-menu left-menu'
+            'right-menu right-menu right-menu';
+        grid-template-columns: 1fr max-content 1fr;
+    }
+
+    @include media(tablet) {
+        grid-template-areas: 'left-menu logo right-menu';
+    }
+
+    .home-link {
+        align-self: center;
+        color: $color__primary;
+        grid-area: logo;
+        margin: $size_1 0;
+    }
+
+    .bloginfo {
+        color: $color__primary;
+        display: block;
+        font-family: $font__heading;
+        font-size: $font__size_sm;
+        font-weight: bold;
+        line-height: $font__line-height-heading;
+        margin: 0;
+
+        img {
+            max-width: 150px;
+        }
+    }
+
+    nav {
+        align-self: center;
+        background-color: $color__primary;
+        display: none;
+        font-weight: 600;
+        margin: 0 (-$padding__wrapper);
+        padding: 0 $padding__wrapper;
+        text-transform: uppercase;
+
+        @include media(tablet) {
+            background-color: transparent;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        > ul {
+
+            @include media(tablet) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        li {
+            text-align: center;
+            border-bottom: 2px solid transparent;
+
+            &.current-menu-item,
+            &:hover,
+            &:focus {
+                border-bottom-color: white;
+            }
+        }
+
+        a {
+            color: white;
+            display: block;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+
+    .main-menu {
+        grid-area: left-menu;
+        padding-top: $size_7;
+
+        @include media(tablet) {
+            padding-top: 0;
+        }
+
+        > ul {
+            justify-content: flex-end;
+            
+            > li {
+
+                @include media(tablet) {
+                    margin-left: $size_15;
+                }
+            }
+
+        }
+    }
+
+    .secondary-menu {
+        grid-area: right-menu;
+        padding-bottom: $size_7;
+
+        @include media(tablet) {
+            padding-bottom: 0;
+        }
+
+        > ul {
+            justify-content: flex-start;
+
+            > li {
+                
+                @include media(tablet) {
+                    margin-right: $size_15;
+                }
+            }
+
+        }
+    }
+
+    .sub-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        align-self: center;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        grid-area: menu-toggle;
+        justify-self: right;
+        line-height: $font__line-height-heading;
+        padding: $size_3 $size_5;
+
+        @include media(tablet) {
+            display: none;
+        }
+
+        &:before {
+            content: "\f0c9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+}
+
+nav a {
+
+    &[href*="500px.com"]:before,
+    &[href*="amazon.com"]:before,
+    &[href*="angel.co"]:before,
+    &[href*="audible.com"]:before,
+    &[href*="behance.net"]:before,
+    &[href*="codepen.io"]:before,
+    &[href*="creativecommons.org"]:before,
+    &[href*="deviantart.com"]:before,
+    &[href*="digg.com"]:before,
+    &[href*="discordapp.com"]:before,
+    &[href*="dribbble.com"]:before,
+    &[href*="ebay.com"]:before,
+    &[href*="facebook.com"]:before,
+    &[href*="flickr.com"]:before,
+    &[href*="github.com"]:before,
+    &[href*="gitlab.com"]:before,
+    &[href*="goodreads.com"]:before,
+    &[href*="houzz.com"]:before,
+    &[href*="imdb.com"]:before,
+    &[href*="instagram.com"]:before,
+    &[href*="kickstarter.com"]:before,
+    &[href*="jsfiddle.net"]:before,
+    &[href*="linkedin.com"]:before,
+    &[href*="last.fm"]:before,
+    &[href*="medium.com"]:before,
+    &[href*="meetup.com"]:before,
+    &[href*="mixcloud.com"]:before,
+    &[href*="patreon.com"]:before,
+    &[href*="periscope.com"]:before,
+    &[href*="pinterest.com"]:before,
+    &[href*="play.google.com"]:before,
+    &[href*="plus.google.com"]:before,
+    &[href*="producthunt.com"]:before,
+    &[href*="quora.com"]:before,
+    &[href*="reddit.com"]:before,
+    &[href*="slack.com"]:before,
+    &[href*="soundcloud.com"]:before,
+    &[href*="spotify.com"]:before,
+    &[href*="tumblr.com"]:before,
+    &[href*="twitch.tv"]:before,
+    &[href*="twitter.com"]:before,
+    &[href*="vimeo.com"]:before,
+    &[href*="wordpress.com"]:before,
+    &[href*="wordpress.org"]:before,
+    &[href*="youtube.com"]:before {
+        font-family: "Font Awesome 5 Brands";
+        text-align: center;
+        width: 1.25em;
+    }
+
+    &[href*="500px.com"] {
+    
+        &:before {
+            content: "\f26e";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="amazon.com"] {
+    
+        &:before {
+            content: "\f270";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="angel.co"] {
+    
+        &:before {
+            content: "\f209";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="audible.com"] {
+    
+        &:before {
+            content: "\f373";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="behance.net"] {
+    
+        &:before {
+            content: "\f39e";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="codepen.io"] {
+    
+        &:before {
+            content: "\f1cb";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="creativecommons.org"] {
+    
+        &:before {
+            content: "\f25e";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="deviantart.com"] {
+    
+        &:before {
+            content: "\f1bd";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="digg.com"] {
+    
+        &:before {
+            content: "\f1a6";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="discordapp.com"] {
+    
+        &:before {
+            content: "\f392";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="dribbble.com"] {
+    
+        &:before {
+            content: "\f17d";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="ebay.com"] {
+    
+        &:before {
+            content: "\f4f4";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="facebook.com"] {
+    
+        &:before {
+            content: "\f39e";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="flickr.com"] {
+    
+        &:before {
+            content: "\f16e";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="github.com"] {
+    
+        &:before {
+            content: "\f09b";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="gitlab.com"] {
+    
+        &:before {
+            content: "\f296";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="goodreads.com"] {
+    
+        &:before {
+            content: "\f3a9";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="houzz.com"] {
+    
+        &:before {
+            content: "\f27c";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="imdb.com"] {
+    
+        &:before {
+            content: "\f2d8";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="instagram.com"] {
+    
+        &:before {
+            content: "\f16d";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="kickstarter.com"] {
+    
+        &:before {
+            content: "\f3bc";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="jsfiddle.net"] {
+    
+        &:before {
+            content: "\f1cc";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="linkedin.com"] {
+    
+        &:before {
+            content: "\f0e1";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="last.fm"] {
+    
+        &:before {
+            content: "\f202";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="medium.com"] {
+    
+        &:before {
+            content: "\f3c7";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="meetup.com"] {
+    
+        &:before {
+            content: "\f2e0";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="mixcloud.com"] {
+    
+        &:before {
+            content: "\f289";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="patreon.com"] {
+    
+        &:before {
+            content: "\f3d9";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="periscope.com"] {
+    
+        &:before {
+            content: "\f3da";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="pinterest.com"] {
+    
+        &:before {
+            content: "\f231";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="play.google.com"] {
+    
+        &:before {
+            content: "\f3ab";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="plus.google.com"] {
+    
+        &:before {
+            content: "\f0d5";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="producthunt.com"] {
+    
+        &:before {
+            content: "\f288";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="quora.com"] {
+    
+        &:before {
+            content: "\f2c4";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="reddit.com"] {
+    
+        &:before {
+            content: "\f281";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="slack.com"] {
+    
+        &:before {
+            content: "\f198";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="soundcloud.com"] {
+    
+        &:before {
+            content: "\f1be";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="spotify.com"] {
+    
+        &:before {
+            content: "\f1bc";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="tumblr.com"] {
+    
+        &:before {
+            content: "\f173";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="twitch.tv"] {
+    
+        &:before {
+            content: "\f1e8";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="twitter.com"] {
+    
+        &:before {
+            content: "\f099";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="vimeo.com"] {
+    
+        &:before {
+            content: "\f27d";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="wordpress.com"],
+    &[href*="wordpress.org"] {
+    
+        &:before {
+            content: "\f19a";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+    &[href*="youtube.com"] {
+    
+        &:before {
+            content: "\f167";
+        }
+    
+        .link-text {
+            @include screen-reader-text;
+        }
+
+    }
+
+}
+
