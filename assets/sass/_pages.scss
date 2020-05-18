@@ -54,6 +54,7 @@
 
         .featured-image {
             background-blend-mode: multiply;
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 100%;
@@ -127,7 +128,7 @@
     }
 
     > *:not(.wp-block-group) {
-        margin-bottom: $size_7;
+        margin-bottom: $size_11;
         margin-top: 0;
         max-width: 100%;
 

@@ -35,6 +35,11 @@
     margin-right: 0;
 }
 
+.wp-block-column {
+    margin-bottom: $size_11;
+    margin-top: $size_11;
+}
+
 .has-maurchi-purple-background-color {
     background-color: $color__purple;
 }
@@ -71,31 +76,38 @@
     background-color: black;
 }
 
-.has-maurchi-purple-color {
+.has-maurchi-purple-color,
+.has-maurchi-purple-color a {
     color: $color__purple;
 }
 
-.has-maurchi-red-color {
+.has-maurchi-red-color,
+.has-maurchi-red-color a {
     color: $color__red;
 }
 
-.has-maurchi-orange-color {
+.has-maurchi-orange-color,
+.has-maurchi-orange-color a {
     color: $color__orange;
 }
 
-.has-maurchi-yellow-color {
+.has-maurchi-yellow-color,
+.has-maurchi-yellow-color a {
     color: $color__yellow;
 }
 
-.has-maurchi-green-color {
+.has-maurchi-green-color,
+.has-maurchi-green-color a {
     color: $color__green;
 }
 
-.has-maurchi-blue-color {
+.has-maurchi-blue-color,
+.has-maurchi-blue-color a {
     color: $color__blue;
 }
 
-.has-maurchi-lavender-color {
+.has-maurchi-lavender-color,
+.has-maurchi-lavender-color a {
     color: $color__lavender;
 }
 

@@ -33,14 +33,25 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-button,
 input,
 select,
 optgroup,
 textarea {
+    background-color: white;
+    border: 2px solid $color__primary;
+    border-radius: 25px;
+	color: $color__text-main;
+	font-family: $font__body;
+	font-weight: 400;
+	line-height: $font__line-height-body;
+	text-rendering: optimizeLegibility;
+}
+
+
+button {
     background-color: $color__background-button;
     border-radius: 50px;
-	color: $color__text-main;
+	color: white;
 	font-family: $font__body;
 	font-weight: 400;
 	line-height: $font__line-height-body;
