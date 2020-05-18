@@ -2,7 +2,7 @@
 /*
 Theme Name:			Maurchi
 Text Domain:		maurchi
-Version:			0.9.1
+Version:			0.9.3
 Requires at least:	4.7
 Requires PHP:		5.2.4
 Description:		Theme for Maurchi
@@ -534,6 +534,7 @@ textarea {
   font-family: "Raleway", BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  padding: 0.63rem;
   text-rendering: optimizeLegibility;
 }
 
@@ -542,8 +543,9 @@ button {
   border-radius: 50px;
   color: white;
   font-family: "Raleway", BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.8;
+  padding: 0.42rem 0.63rem;
   text-rendering: optimizeLegibility;
 }
 
@@ -737,6 +739,14 @@ iframe {
 
 main {
   display: block;
+}
+
+form {
+  text-align: center;
+}
+
+form label {
+  text-align: left;
 }
 
 body:not(.has-post-thumbnail) #site-header {
@@ -1897,11 +1907,15 @@ nav a[href*="youtube.com"] .link-text {
   float: right;
 }
 
+body.has-post-thumbnail .entry-content {
+  padding-top: 4rem;
+}
+
 .entry-content {
   margin-left: auto;
   margin-right: auto;
   max-width: 56.12em;
-  padding: 4rem 0;
+  padding: 0 0 4rem;
 }
 
 .entry-content::after {

@@ -43,7 +43,8 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__body;
 	font-weight: 400;
-	line-height: $font__line-height-body;
+    line-height: $font__line-height-body;
+    padding: $size_4;
 	text-rendering: optimizeLegibility;
 }
 
@@ -53,8 +54,9 @@ button {
     border-radius: 50px;
 	color: white;
 	font-family: $font__body;
-	font-weight: 400;
-	line-height: $font__line-height-body;
+	font-weight: 800;
+    line-height: $font__line-height-body;
+    padding: $size_1 $size_4;
 	text-rendering: optimizeLegibility;
 }
 
@@ -247,4 +249,12 @@ iframe {
 
 main {
     display: block;
+}
+
+form {
+    text-align: center;
+
+    label {
+        text-align: left;
+    }
 }
