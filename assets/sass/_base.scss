@@ -53,11 +53,13 @@ button {
     background-color: $color__background-button;
     border-radius: 50px;
 	color: white;
-	font-family: $font__body;
+    font-family: $font__body;
+    font-size: $font__size_sm;
 	font-weight: 800;
     line-height: $font__line-height-body;
-    padding: $size_1 $size_4;
-	text-rendering: optimizeLegibility;
+    padding: $size_1 $size_9;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
 }
 
 h1,
