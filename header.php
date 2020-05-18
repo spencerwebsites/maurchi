@@ -1,3 +1,13 @@
+<?php
+	$body_classes = '';
+
+	global $post;
+
+	if (has_post_thumbnail( $post->ID ) ) {
+		$body_classes .= 'has-post-thumbnail';
+	}
+?>
+
 <!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
@@ -13,7 +23,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class($body_classes); ?>>
 
 		<header id="site-header" role="banner" class="wrapper">
 

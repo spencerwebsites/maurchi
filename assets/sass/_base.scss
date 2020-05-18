@@ -139,6 +139,21 @@ i {
 	font-style: italic;
 }
 
+figcaption {
+    line-height: $font__line-height-heading;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    td,
+    th {
+        border: 1px solid #666;
+        padding: $size_1;
+    }
+}
+
 blockquote {
     font-weight: 600;
     position: relative;
@@ -154,7 +169,7 @@ blockquote {
         font-size: $size_16 * 2;
         left: -60px;
         line-height: 1;
-        opacity: .3;
+        opacity: .1;
         position: absolute;
         top: -15px;
     }
@@ -183,7 +198,9 @@ code,
 kbd,
 tt,
 var {
-	font-family: $font__code;
+    font-family: $font__code;
+    font-size: $font__size-xxs;
+    line-height: $font__line-height-heading;
 }
 
 abbr,
@@ -209,6 +226,12 @@ nav {
         margin: 0;
         padding: 0;
     }
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main {

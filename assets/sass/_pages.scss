@@ -1,6 +1,13 @@
 .entry-header {
     position: relative;
 
+    .entry-title {
+        max-width: $width__tablet;
+        margin-left: auto;
+        margin-right: auto;
+        word-wrap: break-word;
+    }
+
     &.has-post-thumbnail {
         background-color: $color__primary;
         display: table;
@@ -88,13 +95,41 @@
 
 }
 
+.section-inner {
+    margin-bottom: $size_7;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width__tablet;
+
+    .pagination-single-inner {
+        &:after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+    }
+
+    .next-post {
+        float: right;
+    }
+}
+
 .entry-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width__tablet;
     padding: $padding__section 0;
 
+    &::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
     > *:not(.wp-block-group) {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 900px;
+        margin-bottom: $size_7;
+        margin-top: 0;
+        max-width: 100%;
 
         &:first-child {
             margin-top: 0;
@@ -113,6 +148,15 @@
             margin-right: (-$padding__wrapper);
             margin-top: $padding__section;
             padding: $padding__section $padding__wrapper;
+
+            @include media(tablet) {
+                left: 50%;
+                margin-left: -50vw;
+                margin-right: -50vw;
+                position: relative;
+                right: 50%;
+                width: 100vw;
+            }
 
             + .wp-block-group.has-background {
                 margin-top: 0;
@@ -146,6 +190,15 @@
         max-width: none;
         padding-left: 5.62vw;
         padding-right: 5.62vw;
+
+        @include media(tablet) {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            position: relative;
+            right: 50%;
+            width: 100vw;
+        }
 
         .wp-block-column {
 

@@ -1,5 +1,6 @@
 #site-footer {
     background-color: $color__primary;
+    clear: both;
 
     .main-footer {
         column-gap: $size_15;
@@ -33,7 +34,36 @@
         align-self: center;
         grid-area: footer-nav;
 
+        .sub-menu {
+            display: none;
+        }
+
+        > ul {
+            > .menu-item-has-children {
+                position: relative;
+
+                > ul {
+                    background-color: $color__primary;
+                    padding: $size_3;
+                    top: 100%;
+                    z-index: 9;
+
+                    @include media(tablet) {
+                        box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+                        max-width: 100vw;
+                        position: absolute;
+                        width: max-content;
+
+                        ul {
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
         ul {
+            align-items: center;
             display: block;
             flex-wrap: wrap;
             justify-content: center;
@@ -46,10 +76,17 @@
         li {
             margin: 0 ($size_15/2);
             text-align: center;
+
+            .cta {
+                display: block;
+                margin-bottom: $size_4;
+                margin-top: $size_4;
+            }
         }
 
         a {
             color: white;
+            display: block;
             font-weight: bold;
             text-decoration: none;
             text-transform: uppercase;
